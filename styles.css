@@ -1,0 +1,30 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	margin-left: 10px;
+}
+
+#top{
+	border-style: solid;
+	border-color: black;
+	margin-top: 10px;
+}
+
+div{
+	margin-top: 50px;
+}
+
+.top tr th{
+	padding-left: 10px;
+	padding-right: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+input{
+	display: block;
+	margin-bottom: 20px;
+}

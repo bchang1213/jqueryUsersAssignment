@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hoveroptionalassignment</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#form1").submit(function(){
+				var first = $('#first_name').val();
+				var last = $('#last_name').val();
+				var email = $('#email').val();
+				var contact = $('#contact').val();
+				var clear = $(this).children('input');
+
+				$('#top').append("<tr><th>"+first+"</th><th>"+last+"</th><th>"+email+"</th><th>"+contact+"</th></tr>");
+
+				for (var i = 0; i<clear.length; i++){
+					$(clear[i]).val('');
+				}
+				return false
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<table id="top">
+		<tr id="row">
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email Address</th>
+			<th>Contact #</th>
+		</tr>
+	</table>
+
+	<div>
+		<h1>Add User</h1>
+			<form id="form1" method='post'>
+				First Name: <input type="text" id="first_name">
+				Last Name: <input type="text" id="last_name">
+				Email: <input type="text" id="email">
+				Contact No.: <input type="text" id="contact">
+				<button>Add User</button>
+			</form>
+
+	</div>
+
+</body>
+</html>
